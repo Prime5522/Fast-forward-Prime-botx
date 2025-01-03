@@ -76,18 +76,21 @@ async def start(client, message):
                 return
         except Exception as e:
             print(e)
+
+    # এখানে পরিবর্তন করা হয়েছে: কোডটিকে অ্যাসিঙ্ক্রোনাস ফাংশনের মধ্যে রাখা হয়েছে
     user = message.from_user
-if not await db.is_user_exist(user.id):
-    await db.add_user(user.id, user.first_name)
+    if not await db.is_user_exist(user.id):  # অ্যাসিঙ্ক্রোনাস অপারেশন
+        await db.add_user(user.id, user.first_name)  # অ্যাসিঙ্ক্রোনাস অপারেশন
 
-reply_markup = InlineKeyboardMarkup(main_buttons)
+    reply_markup = InlineKeyboardMarkup(main_buttons)
 
-await client.send_photo(
-    chat_id=message.chat.id,
-    photo="https://envs.sh/KgL.jpg",  # এখানে ছবির path বা URL দিন
-    caption=Script.START_TXT.format(message.from_user.first_name),  # ক্যাপশন
-    reply_markup=reply_markup  # বাটন যুক্ত করা
-)
+    # ফটো পাঠানো
+    await client.send_photo(
+        chat_id=message.chat.id,
+        photo="https://envs.sh/KgL.jpg",  # এখানে ছবির path বা URL দিন
+        caption=Script.START_TXT.format(message.from_user.first_name),  # ক্যাপশন
+        reply_markup=reply_markup  # বাটন যুক্ত করা
+    )
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
