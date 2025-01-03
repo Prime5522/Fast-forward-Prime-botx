@@ -17,6 +17,18 @@ from os import environ, execle, system
 
 START_TIME = time.time()
 
+async def is_subscribed(bot, query, channel):
+    btn = []
+    for id in channel:
+        chat = await bot.get_chat(int(id))
+        try:
+            await bot.get_chat_member(id, query.from_user.id)
+        except UserNotParticipant:
+            btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=chat.invite_link)]) #✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇
+        except Exception as e:
+            pass
+    return btn
+
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
@@ -41,15 +53,41 @@ main_buttons = [[
 
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
-    user = message.from_user
-    if not await db.is_user_exist(user.id):
-        await db.add_user(user.id, user.first_name)
-    reply_markup = InlineKeyboardMarkup(main_buttons)
-    await client.send_message(
-        chat_id=message.chat.id,
-        reply_markup=reply_markup,
-        text=Script.START_TXT.format(message.from_user.first_name))
+    if AUTH_CHANNEL:
+        try:
+            btn = await is_subscribed(client, message, AUTH_CHANNEL)
+            if btn:
+                username = (await client.get_me()).username
+                if len(message.command) > 1:
+                    btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start={message.command[1]}")])
+                else:
+                    btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start=true")])
 
+                await message.reply_photo(
+                    photo="https://envs.sh/KgA.jpg",  # Replace with your image link
+                    caption=(
+                        "<b>👋 Hello {message.from_user.mention},\n\n"
+                        "ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜꜱᴇ ᴍᴇ, ʏᴏᴜ ᴍᴜꜱᴛ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ. "
+                        "ᴄʟɪᴄᴋ ᴏɴ \"✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇\" ʙᴜᴛᴛᴏɴ. "
+                        "ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ, ᴄʟɪᴄᴋ ᴏɴ \"ᴛʀʏ ᴀɢᴀɪɴ\" ʙᴜᴛᴛᴏɴ.</b>"
+                    ),
+                    reply_markup=InlineKeyboardMarkup(btn)
+                )
+                return
+        except Exception as e:
+            print(e)
+    user = message.from_user
+if not await db.is_user_exist(user.id):
+    await db.add_user(user.id, user.first_name)
+
+reply_markup = InlineKeyboardMarkup(main_buttons)
+
+await client.send_photo(
+    chat_id=message.chat.id,
+    photo="https://envs.sh/KgL.jpg",  # এখানে ছবির path বা URL দিন
+    caption=Script.START_TXT.format(message.from_user.first_name),  # ক্যাপশন
+    reply_markup=reply_markup  # বাটন যুক্ত করা
+)
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
