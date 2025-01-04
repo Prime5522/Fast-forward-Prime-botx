@@ -2,7 +2,7 @@ import os
 from config import Config
 
 class  Script(object):
-  START_TXT = """<b>ʜɪ {}
+  START_TXT = """<b>ʜɪ {} ⚡
   
 ɪ'ᴍ ᴀ ᴀᴅᴠᴀɴᴄᴇᴅ  <a href='https://t.me/Prime_Auto_Forward_ProBot'>ᴘʀɪᴍᴇ ꜰᴏʀᴡᴀʀᴅ ʙᴏᴛ</a>
 ɪ ᴄᴀɴ ꜰᴏʀᴡᴀʀᴅ ᴀʟʟ ᴍᴇssᴀɢᴇ ꜰʀᴏᴍ ᴏɴᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟ</b>
