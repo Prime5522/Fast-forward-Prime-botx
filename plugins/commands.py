@@ -213,3 +213,19 @@ async def sys_status(bot, query):
         disable_web_page_preview=True,
     )
 
+async def get_bot_uptime(start_time):
+    # Calculate the uptime in seconds
+    uptime_seconds = int(time.time() - start_time)
+    uptime_minutes = uptime_seconds // 60
+    uptime_hours = uptime_minutes // 60
+    uptime_days = uptime_hours // 24
+    uptime_weeks = uptime_days // 7
+    uptime_string = ""
+    if uptime_hours != 0:
+        uptime_string += f" {uptime_hours % 24}H"
+    if uptime_minutes != 0:
+        uptime_string += f" {uptime_minutes % 60}M"
+    uptime_string += f" {uptime_seconds % 60} Sec"
+    return uptime_string   
+    
+
