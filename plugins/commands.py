@@ -1,6 +1,4 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 import os
 import sys
@@ -29,27 +27,22 @@ async def is_subscribed(bot, query, channel):
             pass
     return btn
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 main_buttons = [[
     InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs ⚙', callback_data='settings#main')
 ],[
-    InlineKeyboardButton('💬 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Prime_botz_Support'),
-    InlineKeyboardButton('🎬 ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Prime_Movies4U')
+    InlineKeyboardButton('💬 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Prime_Support_group'),
+    InlineKeyboardButton('🎬 ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/PrimeCineZone')
 ],[
-    InlineKeyboardButton('✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇', url='https://t.me/Prime_botz')
+    InlineKeyboardButton('✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇', url='https://t.me/PrimeXbots')
 ],[
     InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
     InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
 ],[
-    InlineKeyboardButton('☆ 💫 𝗖𝗥𝗘𝗔𝗧𝗢𝗥 💫 ☆', url='https://t.me/MR_PRIME_SUPREME')
+    InlineKeyboardButton('☆ 💫 𝗖𝗥𝗘𝗔𝗧𝗢𝗥 💫 ☆', url='https://t.me/Prime_Nayem')
 ]]
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
@@ -64,7 +57,7 @@ async def start(client, message):
                     btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start=true")])
 
                 await message.reply_photo(
-                    photo="https://envs.sh/KgA.jpg",  # Replace with your image link
+                    photo="https://i.postimg.cc/xdkd1h4m/IMG-20250715-153124-952.jpg",  # Replace with your image link
                     caption=(
                         "<b>👋 ʜᴇʟʟᴏ ᴅᴇᴀʀ ⚡,\n\n"
                         "ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜꜱᴇ ᴍᴇ, ʏᴏᴜ ᴍᴜꜱᴛ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ.\n\n"
@@ -87,13 +80,11 @@ async def start(client, message):
     # ফটো পাঠানো
     await client.send_photo(
         chat_id=message.chat.id,
-        photo="https://envs.sh/KgL.jpg",  # এখানে ছবির path বা URL দিন
+        photo="https://i.postimg.cc/Wz7qHgrS/IMG-20250922-101022-775.jpg",  # এখানে ছবির path বা URL দিন
         caption=Script.START_TXT.format(message.from_user.first_name),  # ক্যাপশন
         reply_markup=reply_markup  # বাটন যুক্ত করা
     )
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_message(filters.private & filters.command(['restart']) & filters.user(Config.BOT_OWNER))
 async def restart(client, message):
@@ -103,9 +94,7 @@ async def restart(client, message):
     system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
     execle(sys.executable, sys.executable, "main.py", environ)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^help'))
 async def helpcb(bot, query):
@@ -120,9 +109,7 @@ async def helpcb(bot, query):
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(text=Script.HELP_TXT, reply_markup=reply_markup)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^how_to_use'))
 async def how_to_use(bot, query):
@@ -134,9 +121,7 @@ async def how_to_use(bot, query):
         disable_web_page_preview=True
     )
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^back'))
 async def back(bot, query):
@@ -145,9 +130,7 @@ async def back(bot, query):
        reply_markup=reply_markup,
        text=Script.START_TXT.format(query.from_user.first_name))
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
@@ -162,9 +145,7 @@ async def about(bot, query):
         disable_web_page_preview=True
     )
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
@@ -182,9 +163,7 @@ async def status(bot, query):
         disable_web_page_preview=True,
     )
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 @Client.on_callback_query(filters.regex(r'^systm_sts'))
 async def sys_status(bot, query):
