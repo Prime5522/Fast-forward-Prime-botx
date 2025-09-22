@@ -155,6 +155,7 @@ async def about(bot, query):
 @Client.on_callback_query()
 async def cb_handler(client, query):
     user_id = query.from_user.id
+
     if query.data == "closes":
         try:
             await query.message.delete()
@@ -162,14 +163,14 @@ async def cb_handler(client, query):
             await query.answer("⚠️ Cannot delete message.", show_alert=True)
         return  # exit early
 
-    elif query.data == "source_prime":   
+    elif query.data == "source_prime":
+        # delete the original message if possible
         try:
-            
             await query.message.delete()
         except Exception:
             pass
 
-        
+        # reply with the photo and buttons
         await query.message.reply_photo(
             photo="https://i.postimg.cc/hvFZ93Ct/file-000000004188623081269b2440872960.png",
             caption=(
@@ -186,7 +187,11 @@ async def cb_handler(client, query):
                     [InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data="closes")]
                 ]
             )
-)
+        )
+
+        # Always answer the callback to remove the "loading" state
+        await query.answer()
+        return
 
 
 @Client.on_callback_query(filters.regex(r'^status'))
