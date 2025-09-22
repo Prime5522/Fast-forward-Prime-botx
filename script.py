@@ -9,7 +9,7 @@ class  Script(object):
 
 **ᴄʟɪᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ**
 
-<blockquote> 🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛz 🔥</a></blockquote>"""
+<blockquote> 🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ <a href='https://t.me/PrimeXBots'>ᴘʀɪᴍᴇXʙᴏᴛs 🔥</a></blockquote>"""
   
   HELP_TXT = """<b><u>🔆 Help</b></u>
 
@@ -29,7 +29,7 @@ class  Script(object):
 ► __filter type of messages__
 
 
-<blockquote>⏣►📃 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ɪ𝘀𝘀ᴜᴇ, ᴘʀᴏʙʟᴇᴍ ᴏʀ ɴᴇᴇᴅ 𝘀ᴜᴘᴘᴏʀᴛ ᴡʜɪʟᴇ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ɪᴛ ᴡɪʟʟ ʙᴇ 𝘀ᴏʟᴠᴇᴅ ғʀᴏᴍ ᴛʜᴇʀᴇ.➠ <a href='https://t.me/Prime_Botz_Support'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ sᴜᴘᴘᴏʀᴛ</a></blockquote></b>
+<blockquote>⏣►📃 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ɪ𝘀𝘀ᴜᴇ, ᴘʀᴏʙʟᴇᴍ ᴏʀ ɴᴇᴇᴅ 𝘀ᴜᴘᴘᴏʀᴛ ᴡʜɪʟᴇ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ɪᴛ ᴡɪʟʟ ʙᴇ 𝘀ᴏʟᴠᴇᴅ ғʀᴏᴍ ᴛʜᴇʀᴇ.➠ <a href='https://t.me/Prime_Support_Group'>ᴘʀɪᴍᴇXꜱᴜᴘᴘᴏʀᴛ</a></blockquote></b>
 """
   
   HOW_USE_TXT = """<b><u>⚠️ Before Forwarding:</b></u>
@@ -40,14 +40,14 @@ class  Script(object):
 ► __Then use /forward to forward messages__
 
 
-<blockquote>⏣►📃 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ɪ𝘀𝘀ᴜᴇ, ᴘʀᴏʙʟᴇᴍ ᴏʀ ɴᴇᴇᴅ 𝘀ᴜᴘᴘᴏʀᴛ ᴡʜɪʟᴇ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ɪᴛ ᴡɪʟʟ ʙᴇ 𝘀ᴏʟᴠᴇᴅ ғʀᴏᴍ ᴛʜᴇʀᴇ.➠ <a href='https://t.me/Prime_Botz_Support'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ sᴜᴘᴘᴏʀᴛ</a></blockquote></b>"""
+<blockquote>⏣►📃 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ɪ𝘀𝘀ᴜᴇ, ᴘʀᴏʙʟᴇᴍ ᴏʀ ɴᴇᴇᴅ 𝘀ᴜᴘᴘᴏʀᴛ ᴡʜɪʟᴇ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ɪᴛ ᴡɪʟʟ ʙᴇ 𝘀ᴏʟᴠᴇᴅ ғʀᴏᴍ ᴛʜᴇʀᴇ.➠ <a href='https://t.me/Prime_Support_Group'>ᴘʀɪᴍᴇXꜱᴜᴘᴘᴏʀᴛ</a></blockquote></b>"""
   
   ABOUT_TXT = """<b>
 ╔════❰ ғᴏʀᴡᴀʀᴅ ʙᴏᴛ ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼📃ʙᴏᴛ : [ᴘʀɪᴍᴇ Fᴏʀᴡᴀᴅ Bᴏᴛ](https://t.me/Prime_Auto_Forward_ProBot)
-║┣⪼👦Cʀᴇᴀᴛᴏʀ : [ᴍʀ.ᴘʀɪᴍᴇ](https://t.me/MR_PRIME_SUPREME)
-║┣⪼🤖Uᴘᴅᴀᴛᴇ : [ᴘʀɪᴍᴇ ʙᴏᴛᴢ](https://t.me/Prime_botz)
+║┣⪼👦Cʀᴇᴀᴛᴏʀ : [ᴍʀ.ᴘʀɪᴍᴇ](https://t.me/prime_Nayem)
+║┣⪼🤖Uᴘᴅᴀᴛᴇ : [ᴘʀɪᴍᴇXʙᴏᴛs](https://t.me/PrimeXBots)
 ║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : Sᴜᴘᴇʀ Fᴀsᴛ
 ║┣⪼🗣️Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ3
 ║┣⪼📚Lɪʙʀᴀʀʏ : Pʏʀᴏɢʀᴀᴍ Gᴀᴛʜᴇʀ 2.11.0 
@@ -66,7 +66,7 @@ class  Script(object):
 ║┃
 ║┣⪼**🔃 Fᴏʀᴡᴀʀᴅɪɴɢs:** `{}`
 ║┃
-║┣⪼ ✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ 🔥</a>
+║┣⪼ ✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/PrimeXBots'>ᴘʀɪᴍᴇXʙᴏᴛs 🔥</a>
 ║┃
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪
@@ -97,7 +97,7 @@ class  Script(object):
 ║┃
 ║┣⪼<b>𖨠 Pᴇʀᴄᴇɴᴛᴀɢᴇ:</b> <code>{}</code> %
 ║┣
-║┣⪼<b>✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ 🔥</a>
+║┣⪼<b>✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/PrimeXBots'>ᴘʀɪᴍᴇXʙᴏᴛs 🔥</a>
 ║╰━━━━━━━━━━━━━━━➣ 
 ╚════❰ {} ❱══❍⊱❁۪۪
 """
@@ -108,7 +108,7 @@ class  Script(object):
 ║┃
 ║┣⪼ <b>ᴅᴜᴘʟɪᴄᴀᴛᴇ ᴅᴇʟᴇᴛᴇᴅ:</b> <code>{}</code> 
 ║┣⪼
-║┣⪼ <b>✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ 🔥</a>
+║┣⪼ <b>✯ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/PrimeXBots'>ᴘʀɪᴍᴇXʙᴏᴛs 🔥</a>
 ║╰━━━━━━━━━━━━━━━➣
 ╚════❰ {} ❱══❍⊱❁۪۪
 """
@@ -125,4 +125,4 @@ class  Script(object):
 
 <b>If the above is checked then the yes button can be clicked</b>"""
   
-SETTINGS_TXT = """<b>change your settings as your wish. 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ᴘʀᴏʙʟᴇᴍ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ <a href='https://t.me/Prime_Botz_Support'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ sᴜᴘᴘᴏʀᴛ</a></b>"""
+SETTINGS_TXT = """<b>change your settings as your wish. 𝗜ғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴋɪɴᴅ ᴏғ ᴘʀᴏʙʟᴇᴍ ᴜ𝘀ɪɴɢ ᴛʜɪ𝘀 ʙᴏᴛ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴍᴇ𝘀𝘀ᴀɢᴇ ᴏᴜʀ 𝘀ᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ <a href='https://t.me/Prime_Support_Group'>ᴘʀɪᴍᴇXꜱᴜᴘᴘᴏʀᴛ</a></b>"""
