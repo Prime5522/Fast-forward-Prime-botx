@@ -57,7 +57,7 @@ async def start(client, message):
                     btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start=true")])
 
                 await message.reply_photo(
-                    photo="https://i.postimg.cc/xdkd1h4m/IMG-20250715-153124-952.jpg",  # Replace with your image link
+                    photo="https://i.postimg.cc/xdkd1h4m/IMG-20250715-153124-952.jpg",  #
                     caption=(
                         "<b>👋 ʜᴇʟʟᴏ ᴅᴇᴀʀ ⚡,\n\n"
                         "ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜꜱᴇ ᴍᴇ, ʏᴏᴜ ᴍᴜꜱᴛ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ.\n\n"
@@ -70,19 +70,19 @@ async def start(client, message):
         except Exception as e:
             print(e)
 
-    # এখানে পরিবর্তন করা হয়েছে: কোডটিকে অ্যাসিঙ্ক্রোনাস ফাংশনের মধ্যে রাখা হয়েছে
+    # 
     user = message.from_user
-    if not await db.is_user_exist(user.id):  # অ্যাসিঙ্ক্রোনাস অপারেশন
-        await db.add_user(user.id, user.first_name)  # অ্যাসিঙ্ক্রোনাস অপারেশন
+    if not await db.is_user_exist(user.id):  # 
+        await db.add_user(user.id, user.first_name)  
 
     reply_markup = InlineKeyboardMarkup(main_buttons)
 
     # ফটো পাঠানো
     await client.send_photo(
         chat_id=message.chat.id,
-        photo="https://i.postimg.cc/Wz7qHgrS/IMG-20250922-101022-775.jpg",  # এখানে ছবির path বা URL দিন
-        caption=Script.START_TXT.format(message.from_user.first_name),  # ক্যাপশন
-        reply_markup=reply_markup  # বাটন যুক্ত করা
+        photo="https://i.postimg.cc/Wz7qHgrS/IMG-20250922-101022-775.jpg",  # 
+        caption=Script.START_TXT.format(message.from_user.first_name),  # 
+        reply_markup=reply_markup  # 
     )
 
 
@@ -132,19 +132,61 @@ async def back(bot, query):
 
 
 
+
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
-    buttons = [[
-         InlineKeyboardButton('• back', callback_data='help'),
-         InlineKeyboardButton('Stats ✨️', callback_data='status')
-    ]]
+    buttons = [
+        [  
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('Stats ✨️', callback_data='status')
+        ],
+        [  
+            InlineKeyboardButton('🧑‍💻 ꜱᴏᴜʀᴄᴇ ᴄoᴅᴇ 🧑‍💻', callback_data='source_prime')
+        ]
+    ]
     reply_markup = InlineKeyboardMarkup(buttons)
+    
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
         reply_markup=reply_markup,
         disable_web_page_preview=True
-    )
+        )
+    
+@Client.on_callback_query()
+async def cb_handler(client, query):
+    user_id = query.from_user.id
+    if query.data == "closes":
+        try:
+            await query.message.delete()
+        except Exception:
+            await query.answer("⚠️ Cannot delete message.", show_alert=True)
+        return  # exit early
 
+    elif query.data == "source_prime":   
+        try:
+            
+            await query.message.delete()
+        except Exception:
+            pass
+
+        
+        await query.message.reply_photo(
+            photo="https://i.postimg.cc/hvFZ93Ct/file-000000004188623081269b2440872960.png",
+            caption=(
+                f"👋 Hello Dear 👋,\n\n"
+                "⚠️ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀ ᴘʀɪᴠᴀᴛᴇ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ\n\n"
+                "ᴛʜɪs ʙᴏᴛ ʜᴀs ʟᴀsᴛᴇsᴛ ᴀɴᴅ ᴀᴅᴠᴀɴᴄᴇᴅ ꜰᴇᴀᴛᴜʀᴇs⚡️\n"
+                "▸ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ꜱᴏᴜʀᴄᴇ ᴄoᴅᴇ oʀ ʟɪᴋᴇ ᴛʜɪꜱ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ..!\n"
+                "▸ ɪ ᴡɪʟʟ ᴄʀᴇᴀᴛᴇ ᴀ ʙᴏᴛ ꜰᴏʀ ʏᴏᴜ oʀ ꜱᴏᴜʀᴄᴇ ᴄoᴅᴇ\n"
+                "⇒ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ - ♚ ᴀᴅᴍɪɴ ♚."
+            ),
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton("♚ ᴀᴅᴍɪɴ ♚", url="https://t.me/Prime_Admin_Support_ProBot")],
+                    [InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data="closes")]
+                ]
+            )
+)
 
 
 @Client.on_callback_query(filters.regex(r'^status'))
