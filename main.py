@@ -4,7 +4,7 @@ from config import Config
 from pyrogram import Client as VJ, idle
 from plugins.regix import restart_forwards
 
-# লগিং কনফিগারেশন (অপশনাল, কিন্তু ভালো)
+# লগিং কনফিগারেশন
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -27,8 +27,11 @@ if __name__ == "__main__":
         bot_info = await VJBot.get_me()
         print(f"Bot Started as {bot_info.first_name} (@{bot_info.username})")
         
-        # রিস্টার্ট লজিক
-        await restart_forwards(VJBot)
+        # রিস্টার্ট লজিক (ডাটাবেস কানেকশন এখানে ব্যবহার হবে)
+        try:
+            await restart_forwards(VJBot)
+        except Exception as e:
+            print(f"Error in restart_forwards: {e}")
         
         # বট চালু রাখা
         await idle()
@@ -36,8 +39,7 @@ if __name__ == "__main__":
         # বট বন্ধ করার সময়
         await VJBot.stop()
 
-    # কোড রান করার সঠিক নিয়ম (Fix for DeprecationWarning)
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        print("Bot stopped by user.")
+    # লুপ ফিক্স: asyncio.run() এর বদলে get_event_loop() ব্যবহার করা হচ্ছে
+    # কারণ আপনার database.py গ্লোবাল লুপ ব্যবহার করছে।
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
