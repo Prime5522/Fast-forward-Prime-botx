@@ -214,7 +214,7 @@ async def get_bot_uptime(start_time):
     return uptime_string   
     
 
-@Client.on_callback_query()
+@Client.on_callback_query(filters.regex(r"^(closes|source_prime)$"))
 async def cb_handler(client, query):
     user_id = query.from_user.id
 
